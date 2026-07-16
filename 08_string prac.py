@@ -18,3 +18,27 @@ inspection = "2026-07-16"
 card = "설비: " + machine + "\n상태: " + status + "\n가동: " + str(operate) + "\n점검: " + inspection
 print(card)
 
+# 실습. start 생략
+
+word = "temp_sensor"
+print(word[:4]) # temp
+
+# 실습. end 생략
+
+word = "temp_sensor"
+print(word[5:]) # sensor
+
+# 실습. 음수 슬라이싱
+
+word = "sensor_01"
+print(word[-2:]) # 01
+
+# 실습. step으로 건너뛰기
+
+word = "PYTHON"
+print(word[::2]) # PTO
+
+# 실습. 문자열 뒤집기
+
+word = "PYTHON"
+print(word[::-1]) # NOHTYP
