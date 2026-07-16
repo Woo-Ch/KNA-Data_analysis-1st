@@ -42,3 +42,12 @@ print(word[::2]) # PTO
 
 word = "PYTHON"
 print(word[::-1]) # NOHTYP
+
+# 실습. len()으로 길이 재기
+
+number = "01012345678"
+print(len(number)) # 11
+
+# 실습. .count()로 개수 세기
+
+print("a,b,c,d".count(",")) # 3
