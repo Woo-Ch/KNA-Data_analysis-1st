@@ -101,5 +101,25 @@ hello = hi  # print(hello) > 안녕
 print("=== 변수 hello(안녕)와 변수 hi(안녕) 비교 ===")
 print(hello == hi)  # True
 
-print(num1 >= num2) # False
-# print(num1 >= "num2") # TypeError 발생 ( int와 str은 비교 불가)
+# =================================
+
+# and / or / not - 논리연산자
+# and: 둘 다 True여야 True를 반환
+print(5 == 5 and 7 == 7) # True + True = True
+# and는 첫 번째 조건이 False라면 뒤에 조건은 확인 안함
+print(5 == 7 and 7 == 7) # False + True = False
+print(5 == 5 and 7 != 7) # True + False = False
+# 위 코드는 가능하다면 7 != 7 and 5 == 5 순서로 작성
+
+#or: 하나라도 True라면 True 반환   
+print(5 == 5 or 7 == 7) # True + True = True
+print(5 == 7 or 7 == 7) # False + True = True
+# or는 첫 번째 조건이 True라면 뒤에 조건은 확인 안함
+print(5 == 5 or 7 != 7) # True + False = True
+
+# not: 값을 반대로 뒤집음
+print(not True) #False
+print(not 5 == 5) # false
+# 5 == 5를 연산하여 True를 반환
+# not True로 동작해서 True를 뒤집어 False 반환
+# 반환받은 False라는 값을 print가 터미널로 출력
