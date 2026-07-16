@@ -86,3 +86,20 @@ print("정상" == "정상 ") # False
 print("hello" != "hello") # False (!=는 다르다는 의미 이기 때문에 False가 출력)
 print("hello" != "hello ") # True (띄어쓰기로 인해 다르기 때문에 True 출력)
 print("hello" != "Hello") # True
+
+# 질문 1) hello 변수에 할당하는 값을 따옴표로 감싸지 않고 비교
+# print("=== 질문 1) hello 변수에 할당하는 값을 따옴표로 감싸지 않고 비교 ===")
+# hello = hi
+# print(hello == hi)  # NameError(선언하지 않은 이름 호출했을 때)
+# hi는 따옴표에 감싸져있지 않기 때문에 변수로 취급됨
+# 그런데 우리는 hi 변수를 선언한 적이 없기 때문에 에러
+
+# 질문 1) 해결방법
+# print("=== 질문 1) 해결 방법 ===")
+hi = "안녕"  # hello 변수에 hi 변수를 할당하기 전 hi 변수 선언
+hello = hi  # print(hello) > 안녕
+print("=== 변수 hello(안녕)와 변수 hi(안녕) 비교 ===")
+print(hello == hi)  # True
+
+print(num1 >= num2) # False
+# print(num1 >= "num2") # TypeError 발생 ( int와 str은 비교 불가)
