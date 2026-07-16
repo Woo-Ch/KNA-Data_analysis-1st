@@ -133,3 +133,63 @@ print(word[::-1]) # NOHTYP
 
 # 슬라이싱은 범위를 벗어나도 오류가 발생하지 않음
 print("범위를 벗어난 슬라이싱", word[0:100:1]) # PYTHON 정상 출력
+
+# =========================================
+# len() - 문자열의 길이 반환
+# len(문자열)
+
+print(len("hello World!")) # 12 (공백도 모두 글자 취급)
+print(len("")) # 0 (빈 문자열은 0 출력)
+
+var = "여러분~! 한 시간만 더 하면 됩니다! 조금만 더 힘을 내주세요!"
+print(len(var)) # 36 (변수에 담긴 문자열의 길이 출력도 가능)
+
+print(len("이것도") - len("가능할까?")) # -2
+# len()은 int를 반환하기 때문에 연산 가능
+
+abc = "abcdefghijklmnopqrstuvwxyz"
+print("abc 변수의 길이:", len(abc), " / 마지막 인덱스 번호:", len(abc) - 1)
+# abc 변수의 길이: 26  / 마지막 인덱스 번호: 25
+
+# 음수 인덱스를 사용하지 않고 마지막 인덱스 문자를 뽑고 싶을 때
+print(abc[len(abc) - 1])
+
+# in - 특정 문자가 문자열에 포함되어있는지 여부 확인
+# "여부"를 확인하기 때문에 True 또는 False (bool)으로 결과 반환
+# 찾을 문자열 in 문자열
+
+print("고장" in "설비 고장 발생") # True
+print("정상" in "설비 고장 발생") # False
+print("설비에서 고장" in "설비 고장 발생") # False
+print("설비에서 고장" in "설비에서 고장이 났습니다") # True
+
+# not in - in의 정반대 동작
+
+print("고장" not in "설비 고장 발생") # False
+print("정상" not in "설비 고장 발생") # True
+print("설비에서 고장" not in "설비 고장 발생") # True
+print("설비에서 고장" not in "설비에서 고장이 났습니다") # False
+
+print(" " in "설비 고장 발생") # True
+
+# ==============================
+
+# .count() - 문자열에 특정 글자의 수(int)를 반환
+# 문자열.count("찾을 글자")
+
+print("banana".count("a")) # 3
+print("010-1234-1234".count("-")) # 2
+print("layla@spreatics.com".count("@")) # 1
+
+# ==============================
+
+# find()
+# 전달받은 글자가 "첫 번째"로 나오는 위치 인덱스 반환
+# 찾는 글자가 없다면 -1을 반환
+
+email = "hong@company.com"
+at = email.find("@") # @ 위치의 인덱스인 4가 할당
+user_id = email[:at] # hong 이라는 사용자의 아이디만 추출
+
+print(at) # 4
+print(user_id) # hong
