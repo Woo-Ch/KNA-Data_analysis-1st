@@ -193,3 +193,91 @@ user_id = email[:at] # hong 이라는 사용자의 아이디만 추출
 
 print(at) # 4
 print(user_id) # hong
+
+# SQE-00Q8이라는 설비의 SQE만 뽑아내기 (find와 슬라이싱 사용)
+sqe = "SQE-00Q8"
+
+sqe_index = sqe.find("SQE")
+print(sqe_index)
+
+sqe_index = sqe.find("-")
+print(sqe_index) # 3
+sqe_fin = sqe[:sqe_index] # sqe[0:3] -> SQE
+print(sqe_fin) # SQE
+
+
+# ==================================
+print("=== index() ===")
+
+# 특정 문자열의 위치(인덱스 번호)를 반환
+# 앞에서부터 가장 처음 나오는 인덱스 번호만 반환
+# 찾는 문자열이 없으면 Error 발생
+
+email = "layla@spreatics.com"
+at = email.index("@") # 5
+print(email[0:at]) # layla
+print(email[:at]) # 시작 번호가 0이라면 start 생략 가능
+print(email[at:]) # 끝까지 출력하고 싶고, 뒤에 몇 글자가 있는지 모르니 생략
+# 위처럼 시작하면 5번 인덱스부터 출력하기 때문에 @을 포함
+print(email[at+1:]) # at + 1 을 하면 @을 포함하지 않고 출력
+
+# find에서 했던 SQE 뽑아내기 실습 index 사용으로 바꾸기
+
+sqe = "SQE-00Q8"
+
+sqe_index = sqe.index("SQE")
+print(sqe_index)
+
+sqe_index = sqe.index("-") # - 있으니 정상 동작
+print(sqe_index) # 3
+sqe_fin = sqe[:sqe_index] # sqe[0:3] -> SQE
+print(sqe_fin) # SQE
+
+# 만약에
+# sqe_index = sqe.index("/") # / 없으니 Error 나고 중단됨
+
+# =================================
+print("=== count() ===")
+
+# 문자열에서 특정 문자열의 갯수 세기
+
+str = "a, b, c, d, e,a, a"
+
+# a의 갯수 세기
+print(str.count("a")) # 3
+
+# ,의 갯수 세기
+print(str.count(",")) # 6
+
+print(str.count(", ")) # 5 # count로 찾는 문자열과 완전히 동일해야 갯수를 셈
+
+# ========================
+print("=== startswith() ===")
+
+# 특정 문자열로 시작하는지 검사
+# True/False (불리언)
+
+# EQP로 시작하는지 검사하기
+print("EQP-001".startswith("EQP")) # True
+
+# 변수 활용
+eqp = "EQP"
+print("EQP-001".startswith(eqp)) # True
+# 주의사항) 변수명은 따옴표로 감싸기 금지!!!
+
+# ==========================
+print("=== endswith() ===")
+
+# 특정 문자열로 끝나는지 확인
+# True / False로 반환
+
+str2 = "월요일입니다! 여러분은 할 수 있어요!"
+
+print(str2.endswith("!")) # True
+print(str2.endswith("요!")) # True
+print(str2.endswith("음!")) # False
+print(str2.endswith("월요일입니다! 여러분은 할 수 있어요!")) # True
+print(str2.endswith("월요일입니다! 여러분은 할 수 있어요! ")) # False
+print(str2.endswith(" 월요일입니다! 여러분은 할 수 있어요!")) # False
+# 문자열이 완전 똑같아야만 True가 출력된다.
+
