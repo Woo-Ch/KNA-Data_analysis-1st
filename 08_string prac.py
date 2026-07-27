@@ -51,3 +51,17 @@ print(len(number)) # 11
 # 실습. .count()로 개수 세기
 
 print("a,b,c,d".count(",")) # 3
+
+# 실습. find에서 했던 SQE 뽑아내기 실습 index 사용으로 바꾸기
+
+sqe = "SQE-00Q8"
+sqe_index = sqe.index("-")
+sqe_fin = sqe[:sqe_index]
+print(sqe_fin) # SQE
+
+# 실습5. 시작과 끝 확인하기
+
+name = "sensor_log.csv"
+print(name.startswith("sensor")) # True
+print(name.endswith(".csv")) # True
+
