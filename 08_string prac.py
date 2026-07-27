@@ -65,3 +65,90 @@ name = "sensor_log.csv"
 print(name.startswith("sensor")) # True
 print(name.endswith(".csv")) # True
 
+# 실습1. 대문자로 바꾸기
+word = "ready"
+print(word.upper()) # READY
+
+# 실습2. 소문자로 바꾸기
+s = "WARNING"
+print(s.lower()) # warning
+
+# 실습3. 단어 첫 글자 대문자로 만들기
+name = "kim chul soo"
+
+# 실습4. 대소문자 무시하고 비교하기
+
+# 실습5. 대문자인지 소문자인지 검사하기
+word_a = "ABC"
+word_b = "abc"
+word_c = "Abc"
+
+print(word_a.isupper()) # True
+print(word_b.islower()) # True
+print(word_c.isupper()) # False
+
+# 실습6. 파일명 규칙 한 번에 점검하기
+
+file_name = "Sensor_LOG.CSV"
+file_name_lower = file_name.lower()
+
+print(file_name_lower.startswith("sensor")) # True
+print(file_name_lower.endswith(".csv")) # True
+
+# 실습 11. 결과를 변수에 다시 저장하기
+
+str = "    Warning    "
+# 1번결과 "    warning    "
+str_1 = str.lower()
+print("["+str_1+"]") # "[    warning    ]"
+
+# 2번결과 "warning"
+str_2 = str.strip().lower()
+print("["+str_2+"]") # "[warning]"
+
+# 선생님 정답
+str7 = "    Warning    "
+str7 = str7.strip()
+print("["+str7+"]") # Warning
+str7 = str7.lower()
+print("["+str7+"]") # warning
+
+
+# 실습 3. 쉼표 기준으로 나누기
+word = "a,b,c,d"
+print(word.split(",")) # ['a', 'b', 'c', 'd']
+
+# 실습 5. 리스트 합치기
+year = ['2025','01','15']
+print("-".join(year)) # 2025-01-15
+
+# 실습
+# 변수에 python이라는 문자열 할당
+# pyThon 이라고 출력
+
+# 내 방법 1
+a = "python"
+print(a[:2] + a[2].upper() + a[3:]) # pyThon
+
+ # 내 방법2
+a = ['py','t','hon']
+a = a[0] + a[1].upper() + a[2]
+print("".join(a)) #pyThon
+
+# 실습 7. 구분자 통째로 바꾸기
+
+today = "2026/07/27"
+today = today.split("/")
+print("-".join(today)) # 2026-07-27
+
+# 실습 8. CSV 한 줄에서 값 꺼내 정리하기
+
+a = "1, NORMAL, 25.3"
+a = a.split(",")
+print(a[1].strip().lower()) # normal
+
+# 실습1. f-string으로 변수 끼워 출력하기
+name = "PUMP_A"
+temperature = 87
+
+print(f"설비 {name}, 온도 {temperature}도") # 설비 PUMP_A, 온도 87도
