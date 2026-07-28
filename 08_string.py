@@ -241,15 +241,15 @@ print("=== count() ===")
 
 # 문자열에서 특정 문자열의 갯수 세기
 
-str = "a, b, c, d, e,a, a"
+str11 = "a, b, c, d, e,a, a"
 
 # a의 갯수 세기
-print(str.count("a")) # 3
+print(str11.count("a")) # 3
 
 # ,의 갯수 세기
-print(str.count(",")) # 6
+print(str11.count(",")) # 6
 
-print(str.count(", ")) # 5 # count로 찾는 문자열과 완전히 동일해야 갯수를 셈
+print(str11.count(", ")) # 5 # count로 찾는 문자열과 완전히 동일해야 갯수를 셈
 
 # ========================
 print("=== startswith() ===")
@@ -524,4 +524,32 @@ print("안녕", "하세", end = "요\n" + "이렇게?") # 안녕 하세요이렇
 # 근데, 개발자가 각 속성을 직접 부여할 경우
 # 기본값이 아닌 전달받은 속성값을 사용
 print("이런식으로 쓰죠?", "근데 안보이는 기본값이 있어요", sep = " ", end = "\n")
+
+#==================================
+print("=== f-string ===")
+
+name = "PUMP_A"
+temp = 36
+
+# 출력 결과: 설비 PUMP_A, 온도 36도
+# 기존 방법
+print("설비 " + name + ", 온도 " + str(temp) + "도") # 설비 PUMP_A, 온도 36도
+
+# f-string 사용
+print(f"설비 {name}, 온도 {temp}도") # 설비 PUMP_A, 온도 36도
+# 따옴표 밖에 f 작성하기
+# 변수면은 꼭 {중괄호}에 감싸기
+
+# f-string 연산
+hour = 8
+
+# 우리는 하루에 8시간 수업을 듣고, 이는 480분 입니다.
+print(f"우리는 하루에 {hour}시간 수업을 듣고, 이는 {hour * 60}분 입니다.")
+
+# ======================
+print("=== f-string 소수 자릿수 ===")
+
+value = 87.456
+
+print(f"{value:.1f} / {value:.2f}") # 87.5 / 87.46
 
