@@ -152,3 +152,28 @@ name = "PUMP_A"
 temperature = 87
 
 print(f"설비 {name}, 온도 {temperature}도") # 설비 PUMP_A, 온도 87도
+
+# 실습2. f-string 안에서 계산하기
+
+q = 90
+w = 92
+e = 94
+
+print(f"평균 {(q+w+e)/3}") # 평균 92.0
+
+# 실습3. 소수점 자릿수 지정하기
+value = 87.456
+
+print(f"{value:.1f} / {value:.2f}") # 87.5 / 87.46
+
+# 실습4. 센서 로그 한 줄 정리 리포트 만들기
+
+s = " 5, sensor_2, WARNING, 0.78912 "
+s = s.strip().split(",")
+name = s[1].strip()
+stat = s[2].lower().strip()
+value = float(s[3])
+
+
+print(f"[센서 {name}] 상태 {stat}, 측정값 {value:.2f}")
+# [센서 sensor_2] 상태 warning, 측정값 0.79
