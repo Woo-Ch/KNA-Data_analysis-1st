@@ -136,3 +136,17 @@ if found == True:
 else:
   print("없음")
 
+# 실습1. 조건에 맞는 값만 출력하기
+
+temps = [32, 35, 31]
+
+for a in temps:
+  if a >= 30:
+    print("고온:", a)
+
+# 실습2. 두 조건을 모두 만족하는 값 고르기
+
+op_time = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for b in op_time:
+  
