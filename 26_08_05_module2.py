@@ -69,22 +69,3 @@ print("=" * 30)
 # C"\Users\admin\바탕화면\example 폴더 경로에서 위 코드를 실행하고 싶다면
 # 절대경로 : python C"\Users\admin\바탕화면\sample\code.py
 # 상대경로 : python ..\sample\code.py
-
-# ===============================================
-# 표준 라이브러리의 os 모듈 활용
-import os
-
-# os.getcwd() 는 현재 작업 디렉토리를 문자열로 반환시켜준다
-current_working_directory = os.getcwd()
-print(current_working_directory)
-# C:\Users\Visitor\Desktop\KNA-Data_analysis-1st
-
-
-import os
-
-file_list = os.listdir()
-print(file_list)  # 해당 경로에 있는 파일 리스트들을 보여줌.
-
-for file_name in file_list:
-    print(file_name)
-# 이렇게 출력하면 하나하나 나열되서 나오게 됨. 가독성 업
