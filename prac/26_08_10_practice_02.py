@@ -1,0 +1,19 @@
+# 실습2를 위한 참고자료
+
+# 0부터 30까지 6간격으로 배열 채워만들기
+import numpy as np
+
+# 0부터 30까지 6등분 나누어 배열 내용 채우기
+div_six = np.linspace(0, 30, 6)
+print(div_six)  # [ 0.  6. 12. 18. 24. 30.]
+
+# 0부터 숫자 6씩 증가시켜가면서 30보다 작은 값들일때 배열에 붙여나감
+gab_six = np.arange(0, 30, 6)
+print(gab_six)  # [ 0  6 12 18 24]
+
+
+# 실습2. 균등 간격 배열 만들기
+import numpy as np
+
+gab_five = np.linspace(0, 100, 5)
+print(gab_five)  # [  0.  25.  50.  75. 100.]
